@@ -1,0 +1,22 @@
+<%= form_for(@spam,:remote => true, format: 'js' ) do |f| %>
+  <% if @spam.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@spam.errors.count, "error") %> prohibited this spam from being saved:</h2>
+
+      <ul>
+      <% @spam.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%#= f.label :name %><br>
+    <%= f.text_area :name,cols: "100", rows: "10" %>
+    <div id="update_text"></div>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Check '%>
+  </div>
+<% end %>
