@@ -26,3 +26,27 @@ Things you may want to cover:
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
+
+Api Documentation:
+  Request Url : http or https://Here-your-domain-name/api/v1/spam/find_spam
+  Request Method: Post,
+  Required parameter: spam[name]
+    You can send a value in name within hash of spam.
+    Here spam is a hash, name is attribute then it's type has string
+    For Example:
+      {
+       "spam":{
+         "name": "some example word";
+       }
+      }
+  Response:
+    We have used Json format for response so i used it. I sent a response if status is true or false with message.below some example for it
+      {
+			  "status": true,
+			  "message": "Spam"
+			}
+			and
+			{
+			  "status": false,
+			  "message": "Ham"
+			}
