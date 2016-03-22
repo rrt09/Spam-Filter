@@ -5,42 +5,31 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version - 2.2.0
 
-* System dependencies
+* Rails Version - 4.2.1
 
-* Configuration
+* Classifier used - Classifier (https://github.com/cardmagic/classifier)
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Madeleine - Classifier Persistence
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+
 
 Api Documentation:
   Request Url : http or https://Here-your-domain-name/api/v1/spam/find_spam
   Request Method: Post,
   Required parameter: spam[name]
     You can send a value in name within hash of spam.
-    Here spam is a hash, name is attribute then it's type has string
+    Here spam is a hash, name is attribute then it's of type string
     For Example:
       {
        "spam":{
-         "name": "some example word";
+         "name": "Lorem ipsum doler";
        }
       }
   Response:
-    We have used Json format for response so i used it. I sent a response if status is true or false with message.below some example for it
+    We have used JSON format for response. Example JSON response
       {
 			  "status": true,
 			  "message": "Spam"
