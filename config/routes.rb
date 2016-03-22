@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'spams#new'
 
+  # api routes
+  mount API::ApplicationAPI => '/api'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
